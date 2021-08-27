@@ -15,11 +15,11 @@ export const App = () => {
 
       if (!isNaN(currentResult)) { // only record valid calculations
         let calculation = input
-          .replaceAll("+", " + ")
-          .replaceAll("-", " - ")
-          .replaceAll("*", " * ")
-          .replaceAll("/", " / ")
-          // .replaceAll(/^ - /g, "-")
+        .replaceAll(" ", "")
+        .replaceAll("+", " + ")
+        .replaceAll("-", " - ")
+        .replaceAll("*", " * ")
+        .replaceAll("/", " / ")
 
         calculation = calculation + " = " + currentResult;  
         setCalculations([calculation, ...calculations])};
